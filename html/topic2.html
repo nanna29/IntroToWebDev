@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic metadata and page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Evolution of HTTP</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/font/font.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation-->
+      <div class="navigator">
+        <ul class="navbar-nav">
+          <!-- Navigation link -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic1.html">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic2.html">Modern HTTP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic3.html">Future</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="references.html">References</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ===== Thumbnail ===== -->
+      <div class="thumbnail">
+        <h1 class="thumbnail-title">Understanding HTTP</h1>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <article>
+        <h2>HTTP Communication Model</h2>
+
+        <p>
+          HTTP works on a <strong>client-server model</strong>, where clients
+          request resources and servers respond. This separation allows
+          efficient web operation: servers manage resources while clients handle
+          presentation (<em>Fielding et al., 2022; MDN Web Docs, n.d.-a</em>).
+        </p>
+
+        <p>
+          The <strong>request-response structure</strong> is central to HTTP.
+          Clients send requests with a method (e.g., GET, POST), target URI,
+          headers, and sometimes a message body. Servers validate the request
+          and respond with a status code, headers, and optionally content.
+          Origins (scheme, host, port) ensure secure and consistent access.
+        </p>
+
+        <p>
+          HTTP supports <strong>intermediaries</strong> such as proxies and
+          caches that can forward, route, or modify messages to improve
+          performance. Headers like <code>Host</code>, <code>:authority</code>,
+          and <code>Via</code> help route requests correctly.
+        </p>
+
+        <p>
+          Overall, HTTP provides a flexible and standardized method to identify,
+          request, and transfer resources, making it the backbone of modern web
+          communication.
+        </p>
+      </article>
+
+      <article>
+        <h2>Current Status and Web Performance</h2>
+
+        <p>
+          Modern HTTP protocols have improved
+          <strong>web performance and security</strong>.
+          <strong>HTTP/2</strong> (2015) introduced multiplexing, header
+          compression, and better data framing to reduce latency.
+          <strong>HTTP/3</strong>, built on <strong>QUIC</strong>, improves
+          connection speed and stability under high-latency or unreliable
+          networks (<em>Trevisan et al., 2021</em>).
+        </p>
+
+        <p>
+          Adoption is growing: over 72% of web users’ browsers support HTTP/3,
+          though many websites still rely on HTTP/2 or 1.1, limiting its full
+          benefits (<em>Gross, 2022</em>).
+        </p>
+
+        <p>
+          <strong>HTTPS</strong> is now standard for secure web communication,
+          and together with HTTP/2 and HTTP/3 enhances privacy, reduces
+          handshake times, and improves performance in
+          low-bandwidth/high-latency networks.
+        </p>
+
+        <p>
+          In summary, HTTP/2 and HTTP/3 have made web communication faster,
+          safer, and more reliable, though full adoption of HTTP/3 remains a
+          challenge.
+        </p>
+      </article>
+      <article>
+        <h2>Performance Improvements</h2>
+        <p>
+          Modern web applications require faster and more efficient data
+          transfer. HTTP/2 introduced multiplexing, header compression, and
+          server push — significantly improving performance compared to
+          HTTP/1.1.
+        </p>
+
+        <img src="/img/image.png" alt="HTTP2 Diagram" width="80%" />
+        <h2>Key Features of HTTP/3</h2>
+        <ul class="terms-list">
+          <li>Uses QUIC instead of TCP for faster, connectionless transport</li>
+          <li>Reduces latency and improves reliability on unstable networks</li>
+          <li>Integrated encryption (TLS 1.3)</li>
+        </ul>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        This site is a class project for IT 3203 Web Development, Fall 2025.
+      </p>
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank"
+        >Course Website</a
+      >
+    </footer>
+  </body>
+</html>

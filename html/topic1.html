@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic metadata and page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Evolution of HTTP</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/font/font.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation-->
+      <div class="navigator">
+        <ul class="navbar-nav">
+          <!-- Navigation link -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic1.html">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic2.html">Modern HTTP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="topic3.html">Future</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="references.html">References</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ===== Thumbnail ===== -->
+      <div class="thumbnail">
+        <h1 class="thumbnail-title">Understanding HTTP</h1>
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <h2>Early Development</h2>
+        <p>
+          HTTP was developed in the early 1990s as a simple way to share
+          documents over the Internet. HTTP/0.9 supported only basic GET
+          requests and plain HTML responses. Later, HTTP/1.0 introduced headers
+          and metadata, improving communication between client and server.
+        </p>
+      </article>
+
+      <article>
+        <h2>HTTP Evolution</h2>
+
+        <p>
+          <strong>HTTP</strong> was developed to share data on the web and
+          enable resource access across the Internet. The earliest version,
+          <strong>HTTP/0.9</strong> (1990), supported only the GET method and
+          sent raw HTML, without headers or status codes, showing the simplicity
+          of the early web (<em>Fielding et al., 1999</em>).
+        </p>
+
+        <p>
+          <strong>HTTP/1.0</strong> (RFC 1945) added MIME-like headers and
+          metadata, enabling servers to describe content type, caching rules,
+          and other information. However, it still opened a new TCP connection
+          per request and had weak caching and virtual hosting support (<em
+            >Berners-Lee, Fielding, & Nielsen, 1996</em
+          >).
+        </p>
+
+        <p>
+          <strong>HTTP/1.1</strong> (RFC 2616) improved efficiency by allowing
+          multiple requests over a single TCP connection, enhanced cache
+          control, flexible methods, and better support for proxies and
+          gateways. Host headers allowed virtual hosting, and error handling
+          became more reliable (<em>Fielding et al., 1999</em>).
+        </p>
+
+        <p>
+          Overall, the progression from HTTP/0.9 → 1.0 → 1.1 shows step-by-step
+          improvements based on real-world needs. Updates between 1996-1999
+          clarified syntax, headers, and ensured backward compatibility (<em
+            >W3C, 1999</em
+          >), turning HTTP into a flexible protocol capable of supporting the
+          growing complexity of the World Wide Web.
+        </p>
+      </article>
+
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Year</th>
+          <th>Key Features</th>
+        </tr>
+        <tr>
+          <td>HTTP/0.9</td>
+          <td>1990</td>
+          <td>Simple GET requests</td>
+        </tr>
+        <tr>
+          <td>HTTP/1.0</td>
+          <td>1996</td>
+          <td>Headers, Metadata, MIME types</td>
+        </tr>
+        <tr>
+          <td>HTTP/1.1</td>
+          <td>1999</td>
+          <td>Persistent connections, caching, host headers</td>
+        </tr>
+      </table>
+
+      <section>
+        <h2>Key Points</h2>
+        <ul class="terms-list">
+          <li>HTTP/0.9 - simple, GET only, no headers or status codes</li>
+          <li>
+            HTTP/1.0 - added headers and metadata, still one TCP per request
+          </li>
+          <li>
+            HTTP/1.1 - persistent connections, cache control, host headers,
+            improved efficiency
+          </li>
+          <li>
+            Evolution driven by real-world web needs and collaborative
+            standardization
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This site is a class project for IT 3203 Web Development, Fall 2025.
+      </p>
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank"
+        >Course Website</a
+      >
+    </footer>
+  </body>
+</html>
