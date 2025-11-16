@@ -32,6 +32,9 @@
             <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="references.html">References</a>
           </li>
           <li class="nav-item">
@@ -55,7 +58,7 @@
           <strong>HTTP/3</strong> being a major step forward. QUIC provides
           stream-level multiplexing, per-stream flow control, and built-in TLS
           1.3 security, reducing delay and improving stability against packet
-          loss (<em>IETF, 2022</em>).
+          loss.
         </p>
 
         <p>
@@ -63,41 +66,178 @@
           <strong>high-performance applications</strong> that require rapid and
           secure communication. Its lightweight and low-latency features, along
           with transport-layer security, ensure faster and more reliable data
-          protection (<em>MDN Web Docs, n.d.-c</em>).
+          protection.
         </p>
 
         <p>
           Adoption of HTTP/3 is growing rapidly, with studies reporting faster
-          connection setup and higher throughput compared to HTTP/2 (<em
-            >Trevisan et al., 2021</em
-          >). Future web applications are expected to rely more on QUIC-based
-          transport to enhance user experience, scalability, and overall web
-          communication efficiency.
+          connection setup and higher throughput compared to HTTP/2. Future web
+          applications are expected to rely more on QUIC-based transport to
+          enhance user experience, scalability, and overall web communication
+          efficiency.
         </p>
+
+        <h3>1. WebTransport integration and real-time capabilities</h3>
+        <p>
+          Emerging work on WebTransport aims to provide a standardized API and
+          wire format for multiplexed, secure, low-latency client–server
+          communication on top of HTTP/3.
+        </p>
+
+        <p>
+          By enabling bidirectional streams, unsequenced datagrams, and
+          stream-level control within a single HTTP/3 connection, WebTransport
+          allows real-time interactive applications — such as multiplayer
+          gaming, low-latency media, and collaborative tools — to operate with
+          lower head-of-line blocking and improved resilience to packet loss.
+        </p>
+
+        <p>
+          This tighter integration between WebTransport and HTTP/3 positions
+          QUIC-based stacks as a preferable foundation for next-generation web
+          interactivity.
+        </p>
+        <img src="../img/WebTransport.png" alt="WebTransport" width="50%" />
+        <br /><br />
+        <h3>2. Performance trade-offs and implementation challenges</h3>
+        <p>
+          Although QUIC and HTTP/3 bring important advantages, they introduce
+          new implementation and deployment challenges.
+        </p>
+
+        <p>
+          Some measurements have shown cases where QUIC stacks incur overhead on
+          very fast networks or where immature implementations produce less
+          favorable throughput compared to optimized HTTP/2 setups.
+        </p>
+        <img src="../img/Semantics.png" alt="Semantics" width="40%" />
+
+        <p>Real-world benefits therefore depend on:</p>
+        <ul>
+          <li>Careful tuning of client and server stacks</li>
+          <li>CDN and network device support for QUIC</li>
+          <li>Continued maturity of implementations across the ecosystem</li>
+        </ul>
       </article>
       <article>
         <h2>Emerging Technologies</h2>
+
         <p>
-          The next evolution of HTTP may include tighter integration with
-          WebTransport and WebSockets, enabling real-time, bi-directional
-          communication for interactive applications.
+          The next evolution of HTTP will likely emphasize richer, QUIC-based
+          transport primitives and standardized browser APIs.
         </p>
+
+        <p>WebTransport and similar efforts create the building blocks for:</p>
+        <ul>
+          <li>Low-latency communication</li>
+          <li>Multipath and multiplexed channels</li>
+          <li>Co-existence with traditional HTTP semantics</li>
+        </ul>
+
+        <p>
+          Compared to WebSockets, QUIC-based approaches reduce head-of-line
+          blocking and offer better handling of packet loss and network
+          reordering, which is valuable for interactive and real-time
+          applications.
+        </p>
+
+        <p>
+          Developers can expect tighter integration between HTTP/3,
+          WebTransport, and evolving browser APIs, enabling robust real-time
+          features such as:
+        </p>
+        <ul>
+          <li>Game networking</li>
+          <li>Live collaboration</li>
+          <li>Interactive media</li>
+        </ul>
       </article>
+
       <article>
         <h2>Security and Privacy</h2>
+
         <p>
-          With global concerns about data protection, future HTTP versions are
-          expected to enhance encryption, authentication, and content delivery
-          privacy.
+          Security remains central to the design of modern HTTP. QUIC integrates
+          TLS 1.3 from the outset, reducing round trips and protecting the
+          handshake and subsequent application data.
+        </p>
+
+        <p>Future improvements will continue to emphasize:</p>
+        <ul>
+          <li>End-to-end encryption</li>
+          <li>Stronger authentication models</li>
+          <li>Privacy-preserving delivery mechanisms</li>
+        </ul>
+
+        <p>
+          Privacy-preserving transports, such as DNS-over-QUIC and encrypted
+          transport layers, reduce metadata exposure and make eavesdropping more
+          difficult.
+        </p>
+
+        <p>
+          Transport- and application-layer standards are expected to adopt
+          features that limit information leakage, mitigate fingerprinting, and
+          provide guarantees about data confidentiality and integrity.
         </p>
       </article>
 
       <article>
         <h2>AI and Adaptive Networking</h2>
+
         <p>
-          AI-driven traffic optimization<br />
-          Adaptive compression based on content type<br />
-          Predictive preloading for better user experience
+          AI-driven traffic optimization and adaptive networking are poised to
+          play an increasing role within transport and content delivery systems.
+          Potential advancements include:
+        </p>
+        <ul>
+          <li>
+            AI-driven congestion and flow control: models that dynamically tune
+            QUIC parameters, congestion control algorithms, and stream
+            scheduling based on observed patterns to improve throughput and
+            latency.
+          </li>
+          <li>
+            Adaptive compression: on-the-fly selection of compression strategies
+            depending on content type, network conditions, and client
+            capabilities.
+          </li>
+          <li>
+            Predictive preloading: server- or CDN-side prediction of user
+            navigation and content needs, enabling prefetching of assets to
+            reduce perceived load time.
+          </li>
+        </ul>
+
+        <p>
+          Together, these adaptive techniques allow web platforms to react in
+          real time to changing network conditions and user behavior, improving
+          reliability and perceived performance for end users.
+        </p>
+      </article>
+
+      <article>
+        <h2>Future Application Scenarios</h2>
+
+        <p>
+          In cloud-native and edge-first architectures, HTTP/3 and WebTransport
+          provide a unified, secure transport for services requiring low-latency
+          communication across regions and edge locations.
+        </p>
+
+        <ul>
+          <li>Real-time media streaming with improved resilience</li>
+          <li>Multiplayer and cloud gaming with reduced latency variability</li>
+          <li>
+            Collaborative editing tools benefiting from multi-stream control
+          </li>
+        </ul>
+
+        <p>
+          Additionally, as IoT and edge devices proliferate, QUIC-based
+          connections that minimize connection setup overhead and provide
+          built-in encryption become attractive for efficient, secure
+          device-server interactions at scale.
         </p>
       </article>
     </main>

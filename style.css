@@ -249,3 +249,172 @@ footer a:hover {
     /* hover */
   }
 }
+
+/* === QUIZ PAGE STYLES === */
+.quiz-section {
+  background-color: #111;
+  border: 1px solid #00ff99;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 40px;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
+}
+
+.quiz-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.quiz-description {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 25px;
+  font-family: Pretendard-Regular;
+}
+
+.question-block {
+  background-color: #0d0d0d;
+  border: 1px solid #00ff99;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+
+  h3 {
+    color: #00ff99;
+    margin-bottom: 10px;
+  }
+}
+
+.question-block:hover {
+  background-color: #151515;
+  box-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
+}
+
+.question-block p,
+.question-block label {
+  color: #fff;
+  font-family: Pretendard-Regular;
+  line-height: 1.6;
+}
+
+.question-block input[type="text"] {
+  background-color: #000;
+  border: 1px solid #00ff99;
+  border-radius: 6px;
+  color: #fff;
+  padding: 5px 8px;
+  width: 250px;
+}
+
+.question-block input[type="radio"],
+.question-block input[type="checkbox"] {
+  accent-color: #00ff99;
+  margin-right: 6px;
+}
+
+/* === Buttons === */
+.quiz-buttons {
+  text-align: center;
+  margin-top: 25px;
+
+  button {
+    background-color: transparent;
+    border: 1px solid #00ff99;
+    color: #00ff99;
+    font-family: Pretendard-SemiBold;
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+}
+
+.quiz-buttons button:hover {
+  background-color: #00ff99;
+  color: #000;
+}
+
+/* === Results Section === */
+.results-section {
+  background-color: #0d0d0d;
+  border: 1px solid #00ff99;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+
+  h2 {
+    color: #00ff99;
+    margin-bottom: 15px;
+  }
+}
+
+#overall-result {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#total-score {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.question-result {
+  border-top: 1px solid #222;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+/* === Timeline === */
+.http-timeline {
+  position: relative;
+  max-width: 800px;
+}
+
+/* timeline item */
+.timeline-item {
+  position: relative;
+}
+
+/* Circular image */
+.timeline-img {
+  width: 90px;
+  height: 90px;
+  margin-top: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ff99;
+  /* center */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Left side text */
+.timeline-content {
+  width: 40%;
+  /* center */
+  margin-right: auto;
+  margin-left: 0;
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 30px;
+
+  h3 {
+    margin-top: 0;
+    color: #00ff99;
+  }
+}
+
+/* Right side text */
+.timeline-content1 {
+  width: 40%;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: left;
+  padding-left: 20px;
+}

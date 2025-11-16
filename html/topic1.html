@@ -32,6 +32,9 @@
             <a class="nav-link" href="keyconcepts.html">Key Concepts</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="quiz.html">Quiz</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="references.html">References</a>
           </li>
           <li class="nav-item">
@@ -54,43 +57,75 @@
           requests and plain HTML responses. Later, HTTP/1.0 introduced headers
           and metadata, improving communication between client and server.
         </p>
+        <br />
       </article>
 
       <article>
         <h2>HTTP Evolution</h2>
 
+        <article class="http-timeline">
+          <div class="timeline-item">
+            <img src="../img/0.9.png" class="timeline-img" alt="HTTP 0.9" />
+            <div class="timeline-content">
+              <h3>HTTP/0.9 (1990)</h3>
+              <p>
+                Extremely simple, GET-only protocol. No headers or status codes.
+                Returned raw HTML, requiring a new TCP connection per request.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <img src="../img/1.0.png" class="timeline-img" alt="HTTP 1.0" />
+            <div class="timeline-content1">
+              <h3>HTTP/1.0 (1996)</h3>
+              <p>
+                Introduced headers, metadata, and MIME types. Still used one TCP
+                connection per request.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <img src="../img/1.1.png" class="timeline-img" alt="HTTP 1.1" />
+            <div class="timeline-content">
+              <h3>HTTP/1.1 (1999)</h3>
+              <p>
+                Persistent connections, cache control, host headers, pipelining,
+                and more efficient request handling.
+              </p>
+            </div>
+          </div>
+        </article>
+        <br /><br />
+
+        <h3>HTTP/0.9</h3>
         <p>
-          <strong>HTTP</strong> was developed to share data on the web and
-          enable resource access across the Internet. The earliest version,
-          <strong>HTTP/0.9</strong> (1990), supported only the GET method and
-          sent raw HTML, without headers or status codes, showing the simplicity
-          of the early web (<em>Fielding et al., 1999</em>).
+          HTTP/0.9, developed in 1990, was extremely simple. It supported only
+          the GET method and returned raw HTML, without headers or status codes.
+          Each request required a new TCP connection, and there was no way to
+          describe content type, caching rules, or other metadata. This
+          simplicity reflected the early web, designed mainly for sharing static
+          documents.
         </p>
 
+        <h3>HTTP/1.0</h3>
         <p>
-          <strong>HTTP/1.0</strong> (RFC 1945) added MIME-like headers and
-          metadata, enabling servers to describe content type, caching rules,
-          and other information. However, it still opened a new TCP connection
-          per request and had weak caching and virtual hosting support (<em
-            >Berners-Lee, Fielding, & Nielsen, 1996</em
-          >).
+          Introduced in 1996, HTTP/1.0 added headers and metadata, enabling
+          servers to describe content type, caching rules, and other
+          information. Despite this improvement, a new TCP connection was still
+          required for each request. HTTP/1.0 allowed more flexible content
+          delivery and laid the groundwork for status codes and MIME types.
         </p>
 
+        <h3>HTTP/1.1</h3>
         <p>
-          <strong>HTTP/1.1</strong> (RFC 2616) improved efficiency by allowing
-          multiple requests over a single TCP connection, enhanced cache
-          control, flexible methods, and better support for proxies and
-          gateways. Host headers allowed virtual hosting, and error handling
-          became more reliable (<em>Fielding et al., 1999</em>).
-        </p>
-
-        <p>
-          Overall, the progression from HTTP/0.9 → 1.0 → 1.1 shows step-by-step
-          improvements based on real-world needs. Updates between 1996-1999
-          clarified syntax, headers, and ensured backward compatibility (<em
-            >W3C, 1999</em
-          >), turning HTTP into a flexible protocol capable of supporting the
-          growing complexity of the World Wide Web.
+          Released in 1999, HTTP/1.1 introduced persistent connections, allowing
+          multiple requests over a single TCP connection. It enhanced cache
+          control, introduced flexible methods, and improved support for proxies
+          and gateways. Host headers enabled virtual hosting, and error handling
+          became more reliable. HTTP/1.1 also enabled pipelining, which reduced
+          latency for multiple requests in sequence.
         </p>
       </article>
 
@@ -116,24 +151,6 @@
           <td>Persistent connections, caching, host headers</td>
         </tr>
       </table>
-
-      <section>
-        <h2>Key Points</h2>
-        <ul class="terms-list">
-          <li>HTTP/0.9 - simple, GET only, no headers or status codes</li>
-          <li>
-            HTTP/1.0 - added headers and metadata, still one TCP per request
-          </li>
-          <li>
-            HTTP/1.1 - persistent connections, cache control, host headers,
-            improved efficiency
-          </li>
-          <li>
-            Evolution driven by real-world web needs and collaborative
-            standardization
-          </li>
-        </ul>
-      </section>
     </main>
 
     <footer>
